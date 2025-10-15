@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Firebird
-//
-//  Created by Dyan on 15/10/25.
-//
 
 import UIKit
 
