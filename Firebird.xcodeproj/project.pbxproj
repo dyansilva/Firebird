@@ -18,7 +18,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		86860B5C2EA019340082DAF7 /* Exceptions for "Firebird" folder in "Firebird" target */ = {
+		863CEC432EA02B6400465C0C /* Exceptions for "Firebird" folder in "Firebird" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -28,10 +28,10 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		86860B4C2EA019330082DAF7 /* Firebird */ = {
+		863CEC3B2EA02B6400465C0C /* Firebird */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				86860B5C2EA019340082DAF7 /* Exceptions for "Firebird" folder in "Firebird" target */,
+				863CEC432EA02B6400465C0C /* Exceptions for "Firebird" folder in "Firebird" target */,
 			);
 			path = Firebird;
 			sourceTree = "<group>";
@@ -62,7 +62,7 @@
 		86860B412EA019330082DAF7 = {
 			isa = PBXGroup;
 			children = (
-				86860B4C2EA019330082DAF7 /* Firebird */,
+				863CEC3B2EA02B6400465C0C /* Firebird */,
 				86860B4B2EA019330082DAF7 /* Products */,
 				0A595FAFE429222D6763E13B /* Pods */,
 				D2C79CC7F926D9FA8CF604B1 /* Frameworks */,
@@ -103,7 +103,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				86860B4C2EA019330082DAF7 /* Firebird */,
+				863CEC3B2EA02B6400465C0C /* Firebird */,
 			);
 			name = Firebird;
 			productName = Firebird;
@@ -185,9 +185,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Firebird/Pods-Firebird-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Firebird/Pods-Firebird-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
