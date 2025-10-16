@@ -10,7 +10,7 @@ class LoginViewController: UIViewController {
         
         if let email = mailTextField.text, let password = passwordTextField.text {
             manager.login(email: email, password: password) { userModel in
-                self.openHomeView()
+                self.openHomeView(identifier: .homeViewController)
             } failureHandler: { error in
                 self.showMessage(title: "Error", message: error.localizedDescription)
             }
@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerButtonTap(_ sender: Any) {
-     
+        self.openHomeView(identifier: .RegisterViewController)
     }
     
     func showMessage(title: String, message: String) {
@@ -28,13 +28,20 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    func openHomeView() {
-        let home = self.storyboard?.instantiateViewController(identifier: "homeViewController")
-        home?.modalPresentationStyle = .fullScreen
-        if let home = home {
-            self.present(home, animated: true)
+    func openHomeView(identifier: StoryboardIdentifier) {
+        let viewController: UIViewController? = self.storyboard?.instantiateViewController(identifier: identifier.rawValue)
+        viewController?.modalPresentationStyle = .fullScreen
+        if let view = viewController {
+            self.present(view, animated: true)
         } else {
             self.showMessage(title: "Aviso!", message: "Não foi possivel realizar o login.")
         }
     }
+}
+
+
+enum StoryboardIdentifier: String {
+    case  homeViewController = "homeViewController"
+    case  RegisterViewController = "registerViewController"
+    case LoginViewController = "loginViewController"
 }
