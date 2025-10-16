@@ -7,4 +7,10 @@ target 'Firebird' do
 
   # Pods for Firebird
   pod 'FirebaseAuth'
+  
+  
+  target 'FirebirdTests' do
+     inherit! :search_paths
+   end
+  
 end

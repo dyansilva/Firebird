@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAA8711FF8BFA39B39385050 /* Pods_FirebirdTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA19C0F29549B218D1094B /* Pods_FirebirdTests.framework */; };
 		C455BDA22CE733D5D83D7D72 /* Pods_Firebird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0921BBDB21FDA12DF5BBAC62 /* Pods_Firebird.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		86AA795D2EA15A8E000A6D40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86860B422EA019330082DAF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86860B492EA019330082DAF7;
+			remoteInfo = Firebird;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0921BBDB21FDA12DF5BBAC62 /* Pods_Firebird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D2B54C394A52C18657F5B26 /* Pods-FirebirdTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebirdTests.debug.xcconfig"; path = "Target Support Files/Pods-FirebirdTests/Pods-FirebirdTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6656EA9D9E8239206A8F1C98 /* Pods-FirebirdTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebirdTests.release.xcconfig"; path = "Target Support Files/Pods-FirebirdTests/Pods-FirebirdTests.release.xcconfig"; sourceTree = "<group>"; };
 		78FF5D399A4BDBF866C9D088 /* Pods-Firebird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebird.release.xcconfig"; path = "Target Support Files/Pods-Firebird/Pods-Firebird.release.xcconfig"; sourceTree = "<group>"; };
 		86860B4A2EA019330082DAF7 /* Firebird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebird.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86AA79592EA15A8E000A6D40 /* FirebirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EBA993F3AAEAB3D30A64F3 /* Pods-Firebird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebird.debug.xcconfig"; path = "Target Support Files/Pods-Firebird/Pods-Firebird.debug.xcconfig"; sourceTree = "<group>"; };
+		E3AA19C0F29549B218D1094B /* Pods_FirebirdTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebirdTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +51,13 @@
 			path = Firebird;
 			sourceTree = "<group>";
 		};
+		86AA795A2EA15A8E000A6D40 /* FirebirdTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			path = FirebirdTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +69,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86AA79562EA15A8E000A6D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAA8711FF8BFA39B39385050 /* Pods_FirebirdTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +85,8 @@
 			children = (
 				88EBA993F3AAEAB3D30A64F3 /* Pods-Firebird.debug.xcconfig */,
 				78FF5D399A4BDBF866C9D088 /* Pods-Firebird.release.xcconfig */,
+				0D2B54C394A52C18657F5B26 /* Pods-FirebirdTests.debug.xcconfig */,
+				6656EA9D9E8239206A8F1C98 /* Pods-FirebirdTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -63,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				863CEC3B2EA02B6400465C0C /* Firebird */,
+				86AA795A2EA15A8E000A6D40 /* FirebirdTests */,
 				86860B4B2EA019330082DAF7 /* Products */,
 				0A595FAFE429222D6763E13B /* Pods */,
 				D2C79CC7F926D9FA8CF604B1 /* Frameworks */,
@@ -73,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				86860B4A2EA019330082DAF7 /* Firebird.app */,
+				86AA79592EA15A8E000A6D40 /* FirebirdTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				0921BBDB21FDA12DF5BBAC62 /* Pods_Firebird.framework */,
+				E3AA19C0F29549B218D1094B /* Pods_FirebirdTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +145,28 @@
 			productReference = 86860B4A2EA019330082DAF7 /* Firebird.app */;
 			productType = "com.apple.product-type.application";
 		};
+		86AA79582EA15A8E000A6D40 /* FirebirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86AA79612EA15A8E000A6D40 /* Build configuration list for PBXNativeTarget "FirebirdTests" */;
+			buildPhases = (
+				C6F755B1870DC16A7FA5E220 /* [CP] Check Pods Manifest.lock */,
+				86AA79552EA15A8E000A6D40 /* Sources */,
+				86AA79562EA15A8E000A6D40 /* Frameworks */,
+				86AA79572EA15A8E000A6D40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86AA795E2EA15A8E000A6D40 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				86AA795A2EA15A8E000A6D40 /* FirebirdTests */,
+			);
+			name = FirebirdTests;
+			productName = FirebirdTests;
+			productReference = 86AA79592EA15A8E000A6D40 /* FirebirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -122,6 +179,10 @@
 				TargetAttributes = {
 					86860B492EA019330082DAF7 = {
 						CreatedOnToolsVersion = 26.0.1;
+					};
+					86AA79582EA15A8E000A6D40 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 86860B492EA019330082DAF7;
 					};
 				};
 			};
@@ -140,12 +201,20 @@
 			projectRoot = "";
 			targets = (
 				86860B492EA019330082DAF7 /* Firebird */,
+				86AA79582EA15A8E000A6D40 /* FirebirdTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		86860B482EA019330082DAF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86AA79572EA15A8E000A6D40 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,17 +254,35 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Firebird/Pods-Firebird-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Firebird/Pods-Firebird-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebird/Pods-Firebird-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6F755B1870DC16A7FA5E220 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebirdTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -208,7 +295,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86AA79552EA15A8E000A6D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86AA795E2EA15A8E000A6D40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86860B492EA019330082DAF7 /* Firebird */;
+			targetProxy = 86AA795D2EA15A8E000A6D40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		86860B5E2EA019340082DAF7 /* Debug */ = {
@@ -402,6 +504,50 @@
 			};
 			name = Release;
 		};
+		86AA795F2EA15A8E000A6D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D2B54C394A52C18657F5B26 /* Pods-FirebirdTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6XR7P94MV8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bugapps.arquitetura.FirebirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Firebird.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Firebird";
+			};
+			name = Debug;
+		};
+		86AA79602EA15A8E000A6D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6656EA9D9E8239206A8F1C98 /* Pods-FirebirdTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6XR7P94MV8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bugapps.arquitetura.FirebirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Firebird.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Firebird";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +565,15 @@
 			buildConfigurations = (
 				86860B5E2EA019340082DAF7 /* Debug */,
 				86860B5F2EA019340082DAF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86AA79612EA15A8E000A6D40 /* Build configuration list for PBXNativeTarget "FirebirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86AA795F2EA15A8E000A6D40 /* Debug */,
+				86AA79602EA15A8E000A6D40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
