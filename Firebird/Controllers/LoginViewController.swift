@@ -1,6 +1,6 @@
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -10,7 +10,7 @@ class LoginViewController: UIViewController {
         
         if let email = mailTextField.text, let password = passwordTextField.text {
             manager.login(email: email, password: password) { userModel in
-                self.openHomeView(identifier: .homeViewController)
+                self.openView(identifier: .homeViewController)
             } failureHandler: { error in
                 self.showMessage(title: "Error", message: error.localizedDescription)
             }
@@ -19,29 +19,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerButtonTap(_ sender: Any) {
-        self.openHomeView(identifier: .RegisterViewController)
-    }
-    
-    func showMessage(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true)
-    }
-    
-    func openHomeView(identifier: StoryboardIdentifier) {
-        let viewController: UIViewController? = self.storyboard?.instantiateViewController(identifier: identifier.rawValue)
-        viewController?.modalPresentationStyle = .fullScreen
-        if let view = viewController {
-            self.present(view, animated: true)
-        } else {
-            self.showMessage(title: "Aviso!", message: "Não foi possivel realizar o login.")
-        }
+        self.openView(identifier: .registerViewController)
     }
 }
 
-
-enum StoryboardIdentifier: String {
-    case  homeViewController = "homeViewController"
-    case  RegisterViewController = "registerViewController"
-    case LoginViewController = "loginViewController"
-}

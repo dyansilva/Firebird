@@ -1,6 +1,6 @@
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: BaseViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -25,22 +25,6 @@ class RegisterViewController: UIViewController {
     
     @IBAction func openButtonTap(_ sender: Any) {
         self.dismiss(animated: true)
-    }
-    
-    func openView(identifier: StoryboardIdentifier) {
-        let viewController: UIViewController? = self.storyboard?.instantiateViewController(identifier: identifier.rawValue)
-        viewController?.modalPresentationStyle = .fullScreen
-        if let view = viewController {
-            self.present(view, animated: true)
-        } else {
-            self.showMessage(title: "Aviso!", message: "Não foi possivel realizar o login.")
-        }
-    }
-    
-    func showMessage(title: String, message: String) {
-        let alert =  UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true)
     }
 }
 
