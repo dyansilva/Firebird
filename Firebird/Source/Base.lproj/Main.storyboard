@@ -101,7 +101,7 @@
         <!--Register View Controller-->
         <scene sceneID="j2x-2h-Qzp">
             <objects>
-                <viewController id="wsC-1k-eIj" customClass="RegisterViewController" customModule="Firebird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerViewController" id="wsC-1k-eIj" customClass="RegisterViewController" customModule="Firebird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mf8-Qv-7D3">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

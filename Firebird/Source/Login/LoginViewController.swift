@@ -16,6 +16,10 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func registerButtonTap(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let home = storyboard.instantiateViewController(identifier: "registerViewController") as! RegisterViewController
+        home.modalPresentationStyle = .fullScreen
+        self.present(home, animated: true)
     }
     
     override func viewDidLoad() {
