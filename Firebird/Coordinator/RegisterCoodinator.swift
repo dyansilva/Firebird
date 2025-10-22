@@ -1,6 +1,6 @@
 import UIKit
 
-class LoginCoordinator: Coordinator {
+class RegisterCoodinator: Coordinator {
     var navigationController: UINavigationController
     
     required init(navigationController: UINavigationController) {
@@ -8,11 +8,10 @@ class LoginCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = LoginViewController()
-        viewController.onRegisterTap = {
-            let coodinator = RegisterCoodinator(navigationController: self.navigationController)
-            coodinator.start()
-        }
+        let viewController = RegisterViewController()
+    
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    
 }

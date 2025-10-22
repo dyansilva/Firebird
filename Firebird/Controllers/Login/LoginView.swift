@@ -1,6 +1,8 @@
 import UIKit
 
 class LoginView: UIView {
+    // MARK - Clousers
+    var onRegisterTap: (() -> Void)?
     
     // MARK: - Properts
     lazy var emailLabel: UILabel = {
@@ -76,7 +78,11 @@ class LoginView: UIView {
         button.setTitle("Registrar-se", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .orange
+        
         button.layer.cornerRadius = 10
+        
+        button.addTarget(self, action: #selector(registerButtonTap), for: .touchUpInside)
+        
         return button
     }()
     
@@ -134,4 +140,8 @@ class LoginView: UIView {
     }
     
     // MARK: - Actions
+    @objc
+    func registerButtonTap() {
+        self.onRegisterTap?()
+    }
 }
