@@ -1,6 +1,6 @@
 import UIKit
 
-class RegisterCoodinator: Coordinator {
+class HomeCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     required init(navigationController: UINavigationController) {
@@ -8,8 +8,9 @@ class RegisterCoodinator: Coordinator {
     }
     
     func start() {
-        let viewController = RegisterViewController()
-        self.navigationController.pushViewController(viewController, animated: true)
+        let viewController = HomeViewController()
+        viewController.modalPresentationStyle = .fullScreen
+        self.navigationController.present(viewController, animated: true)
     }
     
     

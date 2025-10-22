@@ -3,6 +3,7 @@ import UIKit
 class LoginView: UIView {
     // MARK - Clousers
     var onRegisterTap: (() -> Void)?
+    var onOpenTap: ((_ email: String, _ password: String) -> Void)?
     
     // MARK: - Properts
     lazy var emailLabel: UILabel = {
@@ -69,6 +70,9 @@ class LoginView: UIView {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
         button.layer.cornerRadius = 10
+        
+        button.addTarget(self, action: #selector(openButtonTap), for: .touchUpInside)
+        
         return button
     }()
     
@@ -143,5 +147,13 @@ class LoginView: UIView {
     @objc
     func registerButtonTap() {
         self.onRegisterTap?()
+    }
+    @objc
+    func openButtonTap() {
+        if let email = emailTextField.text,
+           let passeword = passwordTextField.text {
+            self.onOpenTap?(email, passeword)
+        }
+        
     }
 }

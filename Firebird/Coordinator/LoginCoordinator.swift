@@ -13,6 +13,11 @@ class LoginCoordinator: Coordinator {
             let coodinator = RegisterCoodinator(navigationController: self.navigationController)
             coodinator.start()
         }
+        
+        viewController.onLoginSuccess = {
+            let coodinator = HomeCoordinator(navigationController: self.navigationController)
+            coodinator.start()
+        }
         self.navigationController.pushViewController(viewController, animated: true)
     }
 }
