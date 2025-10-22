@@ -9,6 +9,12 @@ class RegisterCoodinator: Coordinator {
     
     func start() {
         let viewController = RegisterViewController()
+        
+        viewController.onRegisterSuccess = {
+            let coodinator = HomeCoordinator(navigationController: self.navigationController)
+            coodinator.start()
+        }
+        
         self.navigationController.pushViewController(viewController, animated: true)
     }
     

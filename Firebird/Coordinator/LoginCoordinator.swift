@@ -9,6 +9,7 @@ class LoginCoordinator: Coordinator {
     
     func start() {
         let viewController = LoginViewController()
+        
         viewController.onRegisterTap = {
             let coodinator = RegisterCoodinator(navigationController: self.navigationController)
             coodinator.start()
@@ -18,6 +19,7 @@ class LoginCoordinator: Coordinator {
             let coodinator = HomeCoordinator(navigationController: self.navigationController)
             coodinator.start()
         }
+        
         self.navigationController.pushViewController(viewController, animated: true)
     }
 }
