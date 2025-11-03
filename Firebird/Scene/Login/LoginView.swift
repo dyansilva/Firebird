@@ -2,7 +2,7 @@ import UIKit
 
 class LoginView: UIView {
     // MARK: - Closures
-    var onLoginTap: (() -> Void)?
+    var onLoginTap: ((_ userModel: UserModel) -> Void)?
     var onRegisterTap: (() -> Void)?
     
     // MARK: - Properts
@@ -91,7 +91,7 @@ class LoginView: UIView {
         
         return button
     }()
-
+    
     // MARK: - Inits
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -121,7 +121,7 @@ class LoginView: UIView {
             emailLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 60),
             emailLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 32),
             emailLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
-
+            
             emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 12),
             emailTextField.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
             emailTextField.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
@@ -138,7 +138,7 @@ class LoginView: UIView {
             passwordLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 12),
             passwordLabel.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             passwordLabel.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-
+            
             passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 12),
             passwordTextField.leadingAnchor.constraint(equalTo: passwordLabel.leadingAnchor),
             passwordTextField.trailingAnchor.constraint(equalTo: passwordLabel.trailingAnchor),
@@ -171,7 +171,12 @@ class LoginView: UIView {
     // MARK: - Actions
     @objc
     func loginButtonTap() {
-        self.onLoginTap?()
+        if let email = emailTextField.text, !email.isEmpty,
+           let password = passwordTextField.text, !password.isEmpty {
+            let userModel = UserModel(email: email, password: password)
+            self.onLoginTap?(userModel)
+        }
+        
     }
     
     @objc
